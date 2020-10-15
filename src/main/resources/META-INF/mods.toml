@@ -1,5 +1,6 @@
 modLoader="javafml"
-loaderVersion="[31,)"
+loaderVersion="[34,)"
+license="LGPL-3.0"
 [[mods]]
 modId="janoeo_arsenal"
 version="${file.jarVersion}"
@@ -11,13 +12,13 @@ Just Another Nether/Overworld/End Ores - Arsenal by AlasDiablo, lIotaMiu, Egame2
 [[dependencies.janoeo_arsenal]]
     modId="forge"
     mandatory=true
-    versionRange="[31,)"
+    versionRange="[34,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.janoeo_arsenal]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.15,)"
+    versionRange="[1.16.3,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.janoeo_arsenal]]

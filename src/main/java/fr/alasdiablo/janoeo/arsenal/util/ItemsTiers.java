@@ -1,6 +1,6 @@
 package fr.alasdiablo.janoeo.arsenal.util;
 
-import fr.alasdiablo.janoeo.item.IngotsItems;
+import fr.alasdiablo.janoeo.init.IngotsItems;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.Ingredient;
