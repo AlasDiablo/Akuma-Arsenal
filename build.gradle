@@ -22,7 +22,7 @@ archivesBaseName = 'Janoeo-Arsenal'
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8'
 
 minecraft {
-    mappings channel: 'snapshot', version: '20200514-1.16'
+    mappings channel: 'snapshot', version: '20200916-1.16.2'
     runs {
         client {
             workingDirectory project.file('run')
@@ -60,7 +60,7 @@ minecraft {
 
 dependencies {
     minecraft 'net.minecraftforge:forge:1.16.3-34.1.0'
-    compile fg.deobf('curse.maven:jenoeo:3080267')
+    compile fg.deobf('curse.maven:jenoeo:3095130')
 }
 
 jar {
