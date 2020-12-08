@@ -8,6 +8,7 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class ModSetup {
@@ -27,7 +28,7 @@ public class ModSetup {
     };
 
     public void init () {
-        List<IInitEvent> events = Arrays.asList(
+        List<IInitEvent> events = Collections.singletonList(
                 new WoolArmorEvent()
         );
         events.forEach(IInitEvent::init);

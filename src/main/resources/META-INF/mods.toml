@@ -4,10 +4,10 @@ license="LGPL-3.0"
 [[mods]]
 modId="janoeo_arsenal"
 version="${file.jarVersion}"
-displayName="Just Another Nether/Overworld/End Ores - Arsenal"
+displayName="Janoeo - Arsenal"
 authors="AlasDiablo, lIotaMiu, Egame257 and Safyrus"
 description='''
-Just Another Nether/Overworld/End Ores - Arsenal by AlasDiablo, lIotaMiu, Egame257 and Safyrus
+Janoeo - Arsenal by AlasDiablo, lIotaMiu, Egame257 and Safyrus
 '''
 [[dependencies.janoeo_arsenal]]
     modId="forge"
@@ -22,8 +22,8 @@ Just Another Nether/Overworld/End Ores - Arsenal by AlasDiablo, lIotaMiu, Egame2
     ordering="NONE"
     side="BOTH"
 [[dependencies.janoeo_arsenal]]
-    modId="janoeo"
+    modId="diolib"
     mandatory=true
-    versionRange="[4.4,)"
+    versionRange="[1.0.4,)"
     ordering="AFTER"
     side="BOTH"

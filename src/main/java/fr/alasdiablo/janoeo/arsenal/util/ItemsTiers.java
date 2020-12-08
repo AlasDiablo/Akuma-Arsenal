@@ -1,29 +1,29 @@
 package fr.alasdiablo.janoeo.arsenal.util;
 
-import fr.alasdiablo.janoeo.init.IngotsItems;
 import net.minecraft.item.IItemTier;
-import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.Ingredient;
 
+import java.util.function.Supplier;
+
 public enum ItemsTiers implements IItemTier {
-    COPPER(2, 32, 6.0f, 1.5f, 9, Ingredient.fromStacks(new ItemStack(IngotsItems.COPPER_INGOT))),
-    ALUMINIUM(2, 28, 5.0f, 1.0f, 6, Ingredient.fromStacks(new ItemStack(IngotsItems.ALUMINIUM_INGOT))),
-    TIN(2, 30, 5.5f, 1.25f, 7, Ingredient.fromStacks(new ItemStack(IngotsItems.TIN_INGOT)));
+    COPPER(2, 32, 6.0f, 1.5f, 9, () -> { try { return Ingredient.fromTag(LocalTags.Ingot.COPPER); } catch (IllegalStateException e) {return null;} }),
+    ALUMINIUM(2, 28, 5.0f, 1.0f, 6, () -> { try { return Ingredient.fromTag(LocalTags.Ingot.ALUMINIUM); } catch (IllegalStateException e) {return null;} }),
+    TIN(2, 30, 5.5f, 1.25f, 7, () -> { try { return Ingredient.fromTag(LocalTags.Ingot.TIN); } catch (IllegalStateException e) {return null;} });
 
     private final int harvestLevel;
     private final int maxUses;
     private final float efficiency;
     private final float attackDamage;
     private final int enchantability;
-    private final Ingredient repairMaterial;
+    private final Supplier<Ingredient> repairMaterialSupplierIn;
 
-    ItemsTiers(int harvestLevelIn, int maxUsesIn, float efficiencyIn, float attackDamageIn, int enchantabilityIn, Ingredient repairMaterialIn) {
+    ItemsTiers(int harvestLevelIn, int maxUsesIn, float efficiencyIn, float attackDamageIn, int enchantabilityIn, Supplier<Ingredient> repairMaterialSupplierIn) {
         this.harvestLevel = harvestLevelIn;
         this.maxUses = maxUsesIn;
         this.efficiency = efficiencyIn;
         this.attackDamage = attackDamageIn;
         this.enchantability = enchantabilityIn;
-        this.repairMaterial = repairMaterialIn;
+        this.repairMaterialSupplierIn = repairMaterialSupplierIn;
     }
 
     @Override
@@ -53,6 +53,6 @@ public enum ItemsTiers implements IItemTier {
 
     @Override
     public Ingredient getRepairMaterial() {
-        return this.repairMaterial;
+        return this.repairMaterialSupplierIn.get();
     }
 }

@@ -3,7 +3,7 @@ package fr.alasdiablo.janoeo.arsenal.data;
 import fr.alasdiablo.janoeo.arsenal.item.Armors;
 import fr.alasdiablo.janoeo.arsenal.item.Tools;
 import fr.alasdiablo.janoeo.arsenal.item.WoolsArmors;
-import fr.alasdiablo.janoeo.tags.ItemsTags;
+import fr.alasdiablo.janoeo.arsenal.util.LocalTags;
 import javafx.util.Pair;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -43,154 +43,154 @@ public class Recipes extends RecipeProvider {
 
     private void tools(Consumer<IFinishedRecipe> consumer) {
         ShapedRecipeBuilder.shapedRecipe(Tools.COPPER_AXE)
-                .key('C', ItemsTags.Ingots.COPPER)
+                .key('C', LocalTags.Ingot.COPPER)
                 .key('S', Tags.Items.RODS_WOODEN)
                 .patternLine("CC")
                 .patternLine("CS")
                 .patternLine(" S")
-                .addCriterion("has_copper", hasItem(ItemsTags.Ingots.COPPER))
+                .addCriterion("has_copper", hasItem(LocalTags.Ingot.COPPER))
                 .addCriterion("has_stick", hasItem(Tags.Items.RODS_WOODEN))
                 .build(consumer);
 
         ShapedRecipeBuilder.shapedRecipe(Tools.COPPER_HOE)
-                .key('C', ItemsTags.Ingots.COPPER)
+                .key('C', LocalTags.Ingot.COPPER)
                 .key('S', Tags.Items.RODS_WOODEN)
                 .patternLine("CC")
                 .patternLine(" S")
                 .patternLine(" S")
-                .addCriterion("has_copper", hasItem(ItemsTags.Ingots.COPPER))
+                .addCriterion("has_copper", hasItem(LocalTags.Ingot.COPPER))
                 .addCriterion("has_stick", hasItem(Tags.Items.RODS_WOODEN))
                 .build(consumer);
 
         ShapedRecipeBuilder.shapedRecipe(Tools.COPPER_PICKAXE)
-                .key('C', ItemsTags.Ingots.COPPER)
+                .key('C', LocalTags.Ingot.COPPER)
                 .key('S', Tags.Items.RODS_WOODEN)
                 .patternLine("CCC")
                 .patternLine(" S ")
                 .patternLine(" S ")
-                .addCriterion("has_copper", hasItem(ItemsTags.Ingots.COPPER))
+                .addCriterion("has_copper", hasItem(LocalTags.Ingot.COPPER))
                 .addCriterion("has_stick", hasItem(Tags.Items.RODS_WOODEN))
                 .build(consumer);
 
         ShapedRecipeBuilder.shapedRecipe(Tools.COPPER_SHOVEL)
-                .key('C', ItemsTags.Ingots.COPPER)
+                .key('C', LocalTags.Ingot.COPPER)
                 .key('S', Tags.Items.RODS_WOODEN)
                 .patternLine("C")
                 .patternLine("S")
                 .patternLine("S")
-                .addCriterion("has_copper", hasItem(ItemsTags.Ingots.COPPER))
+                .addCriterion("has_copper", hasItem(LocalTags.Ingot.COPPER))
                 .addCriterion("has_stick", hasItem(Tags.Items.RODS_WOODEN))
                 .build(consumer);
 
         ShapedRecipeBuilder.shapedRecipe(Tools.COPPER_SWORD)
-                .key('C', ItemsTags.Ingots.COPPER)
+                .key('C', LocalTags.Ingot.COPPER)
                 .key('S', Tags.Items.RODS_WOODEN)
                 .patternLine("C")
                 .patternLine("C")
                 .patternLine("S")
-                .addCriterion("has_copper", hasItem(ItemsTags.Ingots.COPPER))
+                .addCriterion("has_copper", hasItem(LocalTags.Ingot.COPPER))
                 .addCriterion("has_stick", hasItem(Tags.Items.RODS_WOODEN))
                 .build(consumer);
 
 
 
         ShapedRecipeBuilder.shapedRecipe(Tools.ALUMINIUM_AXE)
-                .key('A', ItemsTags.Ingots.ALUMINIUM)
+                .key('A', LocalTags.Ingot.ALUMINIUM)
                 .key('S', Tags.Items.RODS_WOODEN)
                 .patternLine("AA")
                 .patternLine("AS")
                 .patternLine(" S")
-                .addCriterion("has_aluminium", hasItem(ItemsTags.Ingots.ALUMINIUM))
+                .addCriterion("has_aluminium", hasItem(LocalTags.Ingot.ALUMINIUM))
                 .addCriterion("has_stick", hasItem(Tags.Items.RODS_WOODEN))
                 .build(consumer);
 
         ShapedRecipeBuilder.shapedRecipe(Tools.ALUMINIUM_HOE)
-                .key('A', ItemsTags.Ingots.ALUMINIUM)
+                .key('A', LocalTags.Ingot.ALUMINIUM)
                 .key('S', Tags.Items.RODS_WOODEN)
                 .patternLine("AA")
                 .patternLine(" S")
                 .patternLine(" S")
-                .addCriterion("has_aluminium", hasItem(ItemsTags.Ingots.ALUMINIUM))
+                .addCriterion("has_aluminium", hasItem(LocalTags.Ingot.ALUMINIUM))
                 .addCriterion("has_stick", hasItem(Tags.Items.RODS_WOODEN))
                 .build(consumer);
 
         ShapedRecipeBuilder.shapedRecipe(Tools.ALUMINIUM_PICKAXE)
-                .key('A', ItemsTags.Ingots.ALUMINIUM)
+                .key('A', LocalTags.Ingot.ALUMINIUM)
                 .key('S', Tags.Items.RODS_WOODEN)
                 .patternLine("AAA")
                 .patternLine(" S ")
                 .patternLine(" S ")
-                .addCriterion("has_aluminium", hasItem(ItemsTags.Ingots.ALUMINIUM))
+                .addCriterion("has_aluminium", hasItem(LocalTags.Ingot.ALUMINIUM))
                 .addCriterion("has_stick", hasItem(Tags.Items.RODS_WOODEN))
                 .build(consumer);
 
         ShapedRecipeBuilder.shapedRecipe(Tools.ALUMINIUM_SHOVEL)
-                .key('A', ItemsTags.Ingots.ALUMINIUM)
+                .key('A', LocalTags.Ingot.ALUMINIUM)
                 .key('S', Tags.Items.RODS_WOODEN)
                 .patternLine("A")
                 .patternLine("S")
                 .patternLine("S")
-                .addCriterion("has_aluminium", hasItem(ItemsTags.Ingots.ALUMINIUM))
+                .addCriterion("has_aluminium", hasItem(LocalTags.Ingot.ALUMINIUM))
                 .addCriterion("has_stick", hasItem(Tags.Items.RODS_WOODEN))
                 .build(consumer);
 
         ShapedRecipeBuilder.shapedRecipe(Tools.ALUMINIUM_SWORD)
-                .key('C', ItemsTags.Ingots.ALUMINIUM)
+                .key('C', LocalTags.Ingot.ALUMINIUM)
                 .key('S', Tags.Items.RODS_WOODEN)
                 .patternLine("C")
                 .patternLine("C")
                 .patternLine("S")
-                .addCriterion("has_aluminium", hasItem(ItemsTags.Ingots.ALUMINIUM))
+                .addCriterion("has_aluminium", hasItem(LocalTags.Ingot.ALUMINIUM))
                 .addCriterion("has_stick", hasItem(Tags.Items.RODS_WOODEN))
                 .build(consumer);
 
         ShapedRecipeBuilder.shapedRecipe(Tools.TIN_AXE)
-                .key('A', ItemsTags.Ingots.TIN)
+                .key('A', LocalTags.Ingot.TIN)
                 .key('S', Tags.Items.RODS_WOODEN)
                 .patternLine("AA")
                 .patternLine("AS")
                 .patternLine(" S")
-                .addCriterion("has_tin", hasItem(ItemsTags.Ingots.TIN))
+                .addCriterion("has_tin", hasItem(LocalTags.Ingot.TIN))
                 .addCriterion("has_stick", hasItem(Tags.Items.RODS_WOODEN))
                 .build(consumer);
 
         ShapedRecipeBuilder.shapedRecipe(Tools.TIN_HOE)
-                .key('A', ItemsTags.Ingots.TIN)
+                .key('A', LocalTags.Ingot.TIN)
                 .key('S', Tags.Items.RODS_WOODEN)
                 .patternLine("AA")
                 .patternLine(" S")
                 .patternLine(" S")
-                .addCriterion("has_tin", hasItem(ItemsTags.Ingots.TIN))
+                .addCriterion("has_tin", hasItem(LocalTags.Ingot.TIN))
                 .addCriterion("has_stick", hasItem(Tags.Items.RODS_WOODEN))
                 .build(consumer);
 
         ShapedRecipeBuilder.shapedRecipe(Tools.TIN_PICKAXE)
-                .key('A', ItemsTags.Ingots.TIN)
+                .key('A', LocalTags.Ingot.TIN)
                 .key('S', Tags.Items.RODS_WOODEN)
                 .patternLine("AAA")
                 .patternLine(" S ")
                 .patternLine(" S ")
-                .addCriterion("has_tin", hasItem(ItemsTags.Ingots.TIN))
+                .addCriterion("has_tin", hasItem(LocalTags.Ingot.TIN))
                 .addCriterion("has_stick", hasItem(Tags.Items.RODS_WOODEN))
                 .build(consumer);
 
         ShapedRecipeBuilder.shapedRecipe(Tools.TIN_SHOVEL)
-                .key('A', ItemsTags.Ingots.TIN)
+                .key('A', LocalTags.Ingot.TIN)
                 .key('S', Tags.Items.RODS_WOODEN)
                 .patternLine("A")
                 .patternLine("S")
                 .patternLine("S")
-                .addCriterion("has_tin", hasItem(ItemsTags.Ingots.TIN))
+                .addCriterion("has_tin", hasItem(LocalTags.Ingot.TIN))
                 .addCriterion("has_stick", hasItem(Tags.Items.RODS_WOODEN))
                 .build(consumer);
 
         ShapedRecipeBuilder.shapedRecipe(Tools.TIN_SWORD)
-                .key('C', ItemsTags.Ingots.TIN)
+                .key('C', LocalTags.Ingot.TIN)
                 .key('S', Tags.Items.RODS_WOODEN)
                 .patternLine("C")
                 .patternLine("C")
                 .patternLine("S")
-                .addCriterion("has_tin", hasItem(ItemsTags.Ingots.TIN))
+                .addCriterion("has_tin", hasItem(LocalTags.Ingot.TIN))
                 .addCriterion("has_stick", hasItem(Tags.Items.RODS_WOODEN))
                 .build(consumer);
     }
@@ -198,37 +198,37 @@ public class Recipes extends RecipeProvider {
 
     private void armors(Consumer<IFinishedRecipe> consumer) {
         Map<Pair<String, ITag.INamedTag<Item>>, List<Pair<Item, List<String>>>> listOfArmor = new HashMap<>();
-        listOfArmor.put(new Pair<>("has_copper_ingot", ItemsTags.Ingots.COPPER), Arrays.asList(
+        listOfArmor.put(new Pair<>("has_copper_ingot", LocalTags.Ingot.COPPER), Arrays.asList(
                 new Pair<>(Armors.COPPER_HELMET, Arrays.asList("III", "I I")),
                 new Pair<>(Armors.COPPER_CHESTPLATE, Arrays.asList("I I", "III", "III")),
                 new Pair<>(Armors.COPPER_LEGGINGS, Arrays.asList("III", "I I", "I I")),
                 new Pair<>(Armors.COPPER_BOOTS, Arrays.asList("I I", "I I"))
         ));
-        listOfArmor.put(new Pair<>("has_aluminium_ingot", ItemsTags.Ingots.ALUMINIUM), Arrays.asList(
+        listOfArmor.put(new Pair<>("has_aluminium_ingot", LocalTags.Ingot.ALUMINIUM), Arrays.asList(
                 new Pair<>(Armors.ALUMINIUM_HELMET, Arrays.asList("III", "I I")),
                 new Pair<>(Armors.ALUMINIUM_CHESTPLATE, Arrays.asList("I I", "III", "III")),
                 new Pair<>(Armors.ALUMINIUM_LEGGINGS, Arrays.asList("III", "I I", "I I")),
                 new Pair<>(Armors.ALUMINIUM_BOOTS, Arrays.asList("I I", "I I"))
         ));
-        listOfArmor.put(new Pair<>("has_lead_ingot", ItemsTags.Ingots.LEAD), Arrays.asList(
+        listOfArmor.put(new Pair<>("has_lead_ingot", LocalTags.Ingot.LEAD), Arrays.asList(
                 new Pair<>(Armors.LEAD_HELMET, Arrays.asList("III", "I I")),
                 new Pair<>(Armors.LEAD_CHESTPLATE, Arrays.asList("I I", "III", "III")),
                 new Pair<>(Armors.LEAD_LEGGINGS, Arrays.asList("III", "I I", "I I")),
                 new Pair<>(Armors.LEAD_BOOTS, Arrays.asList("I I", "I I"))
         ));
-        listOfArmor.put(new Pair<>("has_silver_ingot", ItemsTags.Ingots.SILVER), Arrays.asList(
+        listOfArmor.put(new Pair<>("has_silver_ingot", LocalTags.Ingot.SILVER), Arrays.asList(
                 new Pair<>(Armors.SILVER_HELMET, Arrays.asList("III", "I I")),
                 new Pair<>(Armors.SILVER_CHESTPLATE, Arrays.asList("I I", "III", "III")),
                 new Pair<>(Armors.SILVER_LEGGINGS, Arrays.asList("III", "I I", "I I")),
                 new Pair<>(Armors.SILVER_BOOTS, Arrays.asList("I I", "I I"))
         ));
-        listOfArmor.put(new Pair<>("has_tin_ingot", ItemsTags.Ingots.TIN), Arrays.asList(
+        listOfArmor.put(new Pair<>("has_tin_ingot", LocalTags.Ingot.TIN), Arrays.asList(
                 new Pair<>(Armors.TIN_HELMET, Arrays.asList("III", "I I")),
                 new Pair<>(Armors.TIN_CHESTPLATE, Arrays.asList("I I", "III", "III")),
                 new Pair<>(Armors.TIN_LEGGINGS, Arrays.asList("III", "I I", "I I")),
                 new Pair<>(Armors.TIN_BOOTS, Arrays.asList("I I", "I I"))
         ));
-        listOfArmor.put(new Pair<>("has_uranium_ingot", ItemsTags.Ingots.URANIUM), Arrays.asList(
+        listOfArmor.put(new Pair<>("has_uranium_ingot", LocalTags.Ingot.URANIUM), Arrays.asList(
                 new Pair<>(Armors.URANIUM_HELMET, Arrays.asList("III", "I I")),
                 new Pair<>(Armors.URANIUM_CHESTPLATE, Arrays.asList("I I", "III", "III")),
                 new Pair<>(Armors.URANIUM_LEGGINGS, Arrays.asList("III", "I I", "I I")),
